@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:paddingStart="@dimen/screen_gutter"
+    android:paddingEnd="@dimen/screen_gutter"
+    android:paddingBottom="@dimen/bottom_bar_height">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/space_lg"
+        android:paddingBottom="@dimen/space_lg">
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_search"
+            android:textAppearance="?attr/textAppearanceHeadlineSmall"
+            android:textColor="@color/color_on_surface" />
+
+        <TextView
+            android:id="@+id/search_result_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:text="@string/search_result_summary"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            android:textColor="@color/color_on_surface_variant" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/job_card_cafe_amazon"
+            style="@style/Widget.StudentWorkHub.Card.Job"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            app:contentPadding="@dimen/space_md">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/job_icon_size"
+                        android:layout_height="@dimen/job_icon_size"
+                        android:background="@drawable/bg_job_icon"
+                        android:importantForAccessibility="no"
+                        android:padding="@dimen/space_sm"
+                        android:src="@drawable/ic_school"
+                        app:tint="@color/color_primary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_md"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/job_cafe_title"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/color_on_surface" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_xs"
+                            android:text="@string/job_cafe_company"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="@color/color_on_surface_variant" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/job_chip_height"
+                        android:background="@drawable/bg_job_status"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/space_sm"
+                        android:paddingEnd="@dimen/space_sm"
+                        android:text="@string/job_status_open"
+                        android:textAppearance="?attr/textAppearanceLabelSmall"
+                        android:textColor="@color/color_on_primary" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_md"
+                    android:text="@string/job_cafe_pay"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="@color/color_accent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:text="@string/job_cafe_distance"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/color_on_surface_variant" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:text="@string/job_cafe_schedule"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/color_on_surface_variant" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/job_card_7_eleven"
+            style="@style/Widget.StudentWorkHub.Card.Job"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_md"
+            app:contentPadding="@dimen/space_md">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/job_icon_size"
+                        android:layout_height="@dimen/job_icon_size"
+                        android:background="@drawable/bg_job_icon"
+                        android:importantForAccessibility="no"
+                        android:padding="@dimen/space_sm"
+                        android:src="@drawable/ic_school"
+                        app:tint="@color/color_primary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_md"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/job_store_title"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/color_on_surface" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_xs"
+                            android:text="@string/job_store_company"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="@color/color_on_surface_variant" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/job_chip_height"
+                        android:background="@drawable/bg_job_status"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/space_sm"
+                        android:paddingEnd="@dimen/space_sm"
+                        android:text="@string/job_status_open"
+                        android:textAppearance="?attr/textAppearanceLabelSmall"
+                        android:textColor="@color/color_on_primary" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_md"
+                    android:text="@string/job_store_pay"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="@color/color_accent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:text="@string/job_store_distance"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/color_on_surface_variant" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:text="@string/job_store_schedule"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/color_on_surface_variant" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/job_card_event_plus"
+            style="@style/Widget.StudentWorkHub.Card.Job"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_md"
+            app:contentPadding="@dimen/space_md">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/job_icon_size"
+                        android:layout_height="@dimen/job_icon_size"
+                        android:background="@drawable/bg_job_icon"
+                        android:importantForAccessibility="no"
+                        android:padding="@dimen/space_sm"
+                        android:src="@drawable/ic_school"
+                        app:tint="@color/color_primary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_md"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/job_event_title"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/color_on_surface" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_xs"
+                            android:text="@string/job_event_company"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="@color/color_on_surface_variant" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/job_chip_height"
+                        android:background="@drawable/bg_job_status"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/space_sm"
+                        android:paddingEnd="@dimen/space_sm"
+                        android:text="@string/job_status_open"
+                        android:textAppearance="?attr/textAppearanceLabelSmall"
+                        android:textColor="@color/color_on_primary" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_md"
+                    android:text="@string/job_event_pay"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="@color/color_accent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:text="@string/job_event_distance"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/color_on_surface_variant" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:text="@string/job_event_schedule"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/color_on_surface_variant" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

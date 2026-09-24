@@ -106,6 +106,19 @@ public class StudentWorkHubNavigationTest {
     }
 
     @Test
+    public void searchPageShowsExampleJobListings() {
+        try (ActivityScenario<MainActivity> scenario = ActivityScenario.launch(MainActivity.class)) {
+            loginWithMockCredentials();
+            onView(withId(R.id.nav_search)).perform(click());
+            onView(withText(R.string.job_cafe_title)).check(matches(isDisplayed()));
+            onView(withText(R.string.job_cafe_company)).check(matches(isDisplayed()));
+            onView(withText(R.string.job_cafe_pay)).check(matches(isDisplayed()));
+            onView(withText(R.string.job_store_title)).check(matches(isDisplayed()));
+            onView(withText(R.string.job_event_title)).check(matches(isDisplayed()));
+        }
+    }
+
+    @Test
     public void centerFabRoutesToCreateJobPage() {
         try (ActivityScenario<MainActivity> scenario = ActivityScenario.launch(MainActivity.class)) {
             loginWithMockCredentials();

@@ -44,7 +44,7 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.mormeehing.PlaceholderFragment"
+        android:name="com.example.mormeehing.SearchFragment"
         android:label="@string/title_search">
         <argument
             android:name="title"

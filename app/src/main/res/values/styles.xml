@@ -10,4 +10,11 @@
         <item name="cornerRadius">@dimen/button_corner_radius</item>
         <item name="android:textAllCaps">false</item>
     </style>
+
+    <style name="Widget.StudentWorkHub.Card.Job" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/color_surface</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="strokeColor">@color/color_outline</item>
+        <item name="strokeWidth">@dimen/card_stroke_width</item>
+    </style>
 </resources>

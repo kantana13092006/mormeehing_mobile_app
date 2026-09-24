@@ -30,4 +30,21 @@
     <string name="content_description_password_toggle">แสดงหรือซ่อนรหัสผ่าน</string>
     <string name="mock_user_email" translatable="false">student@example.com</string>
     <string name="mock_user_password" translatable="false">password</string>
+    <string name="search_result_summary">งานตัวอย่างที่เหมาะกับคุณ 3 งาน</string>
+    <string name="job_status_open">เปิดรับสมัคร</string>
+    <string name="job_cafe_title">พนักงานร้านกาแฟ</string>
+    <string name="job_cafe_company">Cafe Amazon</string>
+    <string name="job_cafe_pay">100 บาท/ชม.</string>
+    <string name="job_cafe_distance">1.2 กม. จากมหาวิทยาลัย</string>
+    <string name="job_cafe_schedule">17:00 &#8211; 21:00 &#8226; จันทร์ &#8211; ศุกร์</string>
+    <string name="job_store_title">พนักงานร้านค้า</string>
+    <string name="job_store_company">7-Eleven</string>
+    <string name="job_store_pay">90 บาท/ชม.</string>
+    <string name="job_store_distance">2.5 กม. จากมหาวิทยาลัย</string>
+    <string name="job_store_schedule">16:00 &#8211; 20:00 &#8226; เสาร์ &#8211; อาทิตย์</string>
+    <string name="job_event_title">ผู้ช่วยงานอีเวนต์</string>
+    <string name="job_event_company">Event Plus</string>
+    <string name="job_event_pay">120 บาท/ชม.</string>
+    <string name="job_event_distance">3.1 กม. จากมหาวิทยาลัย</string>
+    <string name="job_event_schedule">10:00 &#8211; 15:00 &#8226; เสาร์</string>
 </resources>
