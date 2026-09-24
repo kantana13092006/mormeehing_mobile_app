@@ -1,0 +1,13 @@
+<resources>
+    <style name="Widget.StudentWorkHub.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/control_min_height</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.StudentWorkHub.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/control_min_height</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>

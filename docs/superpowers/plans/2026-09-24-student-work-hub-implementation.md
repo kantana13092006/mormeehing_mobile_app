@@ -39,7 +39,7 @@
 
 - `gradle/libs.versions.toml` — add Navigation 2.10.2 aliases.
 - `app/build.gradle.kts` — add Navigation Fragment/UI/Testing dependencies.
-- `app/src/main/java/com/example/mormeehing/MainActivity.java` — own the NavHost, shared BottomAppBar/FAB, visibility, and route selection.
+- `app/src/main/java/com/example/mormeehing/MainActivity.java` — own the NavHost, shared BottomNavigationView/FAB, visibility, and route selection.
 - `app/src/main/res/layout/activity_main.xml` — replace the invalid starter layout with the NavHost + bottom shell.
 - `app/src/main/res/values/strings.xml` — add screen labels, menu labels, errors, and mock credentials.
 - `app/src/main/res/values/colors.xml` and `values-night/colors.xml` — add semantic light/night tokens.
@@ -209,9 +209,9 @@ Expected: the test cannot find the expected Splash/Login content. If no emulator
 
 Set Splash as `startDestination`, add both Splash-to-Login actions, and give each post-login destination a resource-backed `title` string argument. Inflate `fragment_placeholder.xml`, read `getArguments().getString("title")`, and set the title TextView with a resource-backed fallback.
 
-- [ ] **Step 4: Add the BottomAppBar shell**
+- [ ] **Step 4: Add the BottomNavigationView shell**
 
-Replace `activity_main.xml` with a full-screen NavHost, a bottom-anchored BottomAppBar, and a centered FAB. The menu has four checkable items: Home, Search, Schedule, Profile. The FAB routes to Create Job. Use vector icons and resource-backed labels/content descriptions.
+Replace `activity_main.xml` with a full-screen NavHost, a bottom-anchored BottomNavigationView, and a centered FAB. The menu has four checkable items: Home, Search, Schedule, Profile, with a disabled transparent center slot reserved for the FAB. The FAB routes to Create Job. Use vector icons and resource-backed labels/content descriptions.
 
 - [ ] **Step 5: Implement MainActivity route handling**
 
@@ -272,7 +272,7 @@ Run `.\gradlew.bat test`, `.\gradlew.bat assembleDebug`, and `.\gradlew.bat conn
 
 - [ ] **Step 4: Review native UI**
 
-Inspect small-phone portrait, large-phone portrait, and landscape. Confirm safe-area padding, no content behind BottomAppBar, Thai labels do not clip, icons are vector/consistent, light/night contrast is readable, password paste/autofill works, and pressed states do not shift layout.
+Inspect small-phone portrait, large-phone portrait, and landscape. Confirm safe-area padding, no content behind BottomNavigationView, Thai labels do not clip, icons are vector/consistent, light/night contrast is readable, password paste/autofill works, and pressed states do not shift layout.
 
 - [ ] **Step 5: Commit verification**
 

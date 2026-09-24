@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/splash_icon_size"
+    android:height="@dimen/splash_icon_size"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@color/color_primary"
+        android:pathData="M12,3L1,9l4,2.18v6.08L12,21l7,-3.74v-6.08L23,9zM12,5.31L18.74,9 12,12.69 5.26,9zM7,12.27l5,2.73 5,-2.73v3.06l-5,2.67 -5,-2.67z" />
+</vector>

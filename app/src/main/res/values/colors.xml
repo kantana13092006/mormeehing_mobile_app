@@ -14,4 +14,6 @@
     <color name="color_outline">#FFDDD6FE</color>
     <color name="color_error">#FFDC2626</color>
     <color name="color_on_error">#FFFFFFFF</color>
+    <color name="color_splash_start">#FFEDE9FE</color>
+    <color name="color_splash_end">#FFF5F3FF</color>
 </resources>

@@ -6,9 +6,7 @@
     <string name="action_login">เข้าสู่ระบบ</string>
     <string name="title_login">เข้าสู่ระบบ</string>
     <string name="label_email">อีเมล</string>
-    <string name="hint_email">student@example.com</string>
     <string name="label_password">รหัสผ่าน</string>
-    <string name="hint_password">กรอกรหัสผ่าน</string>
     <string name="error_email_required">กรุณากรอกอีเมล</string>
     <string name="error_password_required">กรุณากรอกรหัสผ่าน</string>
     <string name="error_invalid_credentials">อีเมลหรือรหัสผ่านไม่ถูกต้อง</string>
@@ -17,11 +15,19 @@
     <string name="title_create_job">สร้างงาน</string>
     <string name="title_schedule">ตารางงาน</string>
     <string name="title_profile">โปรไฟล์</string>
+    <string name="title_job_details">รายละเอียดงาน</string>
+    <string name="title_work_hours">ชั่วโมงทำงาน</string>
+    <string name="title_income">รายได้</string>
+    <string name="title_applications">การสมัครงาน</string>
+    <string name="title_search_filters">ตัวกรองการค้นหา</string>
     <string name="menu_home">หน้าหลัก</string>
     <string name="menu_search">ค้นหางาน</string>
     <string name="menu_schedule">ตารางงาน</string>
     <string name="menu_profile">โปรไฟล์</string>
+    <string name="menu_action_spacer" translatable="false">&#160;</string>
     <string name="content_description_add">สร้างงาน</string>
+    <string name="content_description_school">ไอคอน Student Work Hub</string>
+    <string name="content_description_password_toggle">แสดงหรือซ่อนรหัสผ่าน</string>
     <string name="mock_user_email" translatable="false">student@example.com</string>
     <string name="mock_user_password" translatable="false">password</string>
 </resources>
