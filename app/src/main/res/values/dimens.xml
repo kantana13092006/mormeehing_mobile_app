@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_lg">24dp</dimen>
+    <dimen name="screen_gutter">16dp</dimen>
+    <dimen name="control_min_height">48dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+    <dimen name="bottom_bar_height">80dp</dimen>
+</resources>

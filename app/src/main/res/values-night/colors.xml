@@ -1,0 +1,14 @@
+<resources>
+    <color name="color_primary">#FFD0BCFF</color>
+    <color name="color_on_primary">#FF381E72</color>
+    <color name="color_secondary">#FFCCC2DC</color>
+    <color name="color_on_secondary">#FF332D41</color>
+    <color name="color_accent">#FF6BDB8C</color>
+    <color name="color_background">#FF1C1B1F</color>
+    <color name="color_surface">#FF211F26</color>
+    <color name="color_on_surface">#FFE6E1E9</color>
+    <color name="color_on_surface_variant">#FFCAC4D0</color>
+    <color name="color_outline">#FF938F99</color>
+    <color name="color_error">#FFFFB4AB</color>
+    <color name="color_on_error">#FF690005</color>
+</resources>

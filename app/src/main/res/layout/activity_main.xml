@@ -5,14 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:foreground=""
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="62dp"
         android:layout_height="23dp"
         android:text="เเอปชิเชชั่น"
-        android:textColor="FFFFFF"
+        android:textColor="@color/color_on_surface"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
