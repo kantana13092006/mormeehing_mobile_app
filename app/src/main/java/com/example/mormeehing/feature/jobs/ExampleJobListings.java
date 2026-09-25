@@ -12,27 +12,9 @@ public final class ExampleJobListings {
 
     public static List<JobListing> create() {
         List<JobListing> listings = new ArrayList<>();
-        listings.add(new JobListing(
-                R.string.job_cafe_title,
-                R.string.job_cafe_company,
-                R.string.job_cafe_pay,
-                R.string.job_cafe_distance,
-                R.string.job_cafe_schedule,
-                R.string.job_status_open));
-        listings.add(new JobListing(
-                R.string.job_store_title,
-                R.string.job_store_company,
-                R.string.job_store_pay,
-                R.string.job_store_distance,
-                R.string.job_store_schedule,
-                R.string.job_status_open));
-        listings.add(new JobListing(
-                R.string.job_event_title,
-                R.string.job_event_company,
-                R.string.job_event_pay,
-                R.string.job_event_distance,
-                R.string.job_event_schedule,
-                R.string.job_status_open));
+        listings.add(new JobListing("พนักงานร้านกาแฟ","aaaa","500 บาท",6,"15.00","เปิดรับสมัคร"));
+
+        listings.add(new JobListing("ผู้ดูเเลระบบ","admin","100 บาท",5 ,"15.00","เปิดรับสมัคร"));
         return Collections.unmodifiableList(listings);
     }
 }

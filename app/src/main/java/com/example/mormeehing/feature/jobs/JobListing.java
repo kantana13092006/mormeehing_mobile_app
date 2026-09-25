@@ -4,20 +4,20 @@ import androidx.annotation.StringRes;
 
 public final class JobListing {
 
-    private final int titleResId;
-    private final int companyResId;
-    private final int payResId;
+    private final String titleResId;
+    private final String companyResId;
+    private final String payResId;
     private final int distanceResId;
-    private final int scheduleResId;
-    private final int statusResId;
+    private final String scheduleResId;
+    private final String statusResId;
 
     public JobListing(
-            @StringRes int titleResId,
-            @StringRes int companyResId,
-            @StringRes int payResId,
-            @StringRes int distanceResId,
-            @StringRes int scheduleResId,
-            @StringRes int statusResId) {
+             String titleResId,
+             String companyResId,
+             String payResId,
+             int distanceResId,
+             String scheduleResId,
+             String statusResId) {
         this.titleResId = titleResId;
         this.companyResId = companyResId;
         this.payResId = payResId;
@@ -26,15 +26,14 @@ public final class JobListing {
         this.statusResId = statusResId;
     }
 
-    public int getTitleResId() {
+    public String getTitleResId() {
         return titleResId;
     }
 
-    public int getCompanyResId() {
-        return companyResId;
+    public String getCompanyResId() { return companyResId;
     }
 
-    public int getPayResId() {
+    public String getPayResId() {
         return payResId;
     }
 
@@ -42,11 +41,10 @@ public final class JobListing {
         return distanceResId;
     }
 
-    public int getScheduleResId() {
+    public String getScheduleResId() {
         return scheduleResId;
     }
 
-    public int getStatusResId() {
-        return statusResId;
+    public String getStatusResId() { return statusResId;
     }
 }
