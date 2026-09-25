@@ -38,6 +38,8 @@ public class LoginFragment extends Fragment {
         emailInput = view.findViewById(R.id.input_email);
         passwordInput = view.findViewById(R.id.input_password);
         formError = view.findViewById(R.id.form_error);
+        emailInput.setText(R.string.mock_user_email);
+        passwordInput.setText(R.string.mock_user_password);
 
         TextWatcher clearEmailError = new SimpleTextWatcher() {
             @Override

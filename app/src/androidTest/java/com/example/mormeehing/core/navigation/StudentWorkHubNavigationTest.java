@@ -44,6 +44,15 @@ public class StudentWorkHubNavigationTest {
     }
 
     @Test
+    public void loginFormPrefillsMockCredentials() {
+        try (ActivityScenario<MainActivity> scenario = ActivityScenario.launch(MainActivity.class)) {
+            onView(withText(R.string.action_get_started)).perform(click());
+            onView(withId(R.id.input_email)).check(matches(withText(R.string.mock_user_email)));
+            onView(withId(R.id.input_password)).check(matches(withText(R.string.mock_user_password)));
+        }
+    }
+
+    @Test
     public void loginButtonOnSplashOpensLogin() {
         try (ActivityScenario<MainActivity> scenario = ActivityScenario.launch(MainActivity.class)) {
             onView(withText(R.string.action_login)).perform(click());
