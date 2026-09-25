@@ -34,7 +34,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.mormeehing.PlaceholderFragment"
+        android:name="com.example.mormeehing.feature.common.PlaceholderFragment"
         android:label="@string/title_home">
         <argument
             android:name="title"
@@ -54,7 +54,7 @@
 
     <fragment
         android:id="@+id/createJobFragment"
-        android:name="com.example.mormeehing.PlaceholderFragment"
+        android:name="com.example.mormeehing.feature.common.PlaceholderFragment"
         android:label="@string/title_create_job">
         <argument
             android:name="title"
@@ -64,7 +64,7 @@
 
     <fragment
         android:id="@+id/scheduleFragment"
-        android:name="com.example.mormeehing.PlaceholderFragment"
+        android:name="com.example.mormeehing.feature.common.PlaceholderFragment"
         android:label="@string/title_schedule">
         <argument
             android:name="title"
@@ -74,7 +74,7 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.mormeehing.PlaceholderFragment"
+        android:name="com.example.mormeehing.feature.common.PlaceholderFragment"
         android:label="@string/title_profile">
         <argument
             android:name="title"
@@ -84,7 +84,7 @@
 
     <fragment
         android:id="@+id/jobDetailsFragment"
-        android:name="com.example.mormeehing.PlaceholderFragment"
+        android:name="com.example.mormeehing.feature.common.PlaceholderFragment"
         android:label="@string/title_job_details">
         <argument
             android:name="title"
@@ -94,7 +94,7 @@
 
     <fragment
         android:id="@+id/workHoursFragment"
-        android:name="com.example.mormeehing.PlaceholderFragment"
+        android:name="com.example.mormeehing.feature.common.PlaceholderFragment"
         android:label="@string/title_work_hours">
         <argument
             android:name="title"
@@ -104,7 +104,7 @@
 
     <fragment
         android:id="@+id/incomeFragment"
-        android:name="com.example.mormeehing.PlaceholderFragment"
+        android:name="com.example.mormeehing.feature.common.PlaceholderFragment"
         android:label="@string/title_income">
         <argument
             android:name="title"
@@ -114,7 +114,7 @@
 
     <fragment
         android:id="@+id/applicationsFragment"
-        android:name="com.example.mormeehing.PlaceholderFragment"
+        android:name="com.example.mormeehing.feature.common.PlaceholderFragment"
         android:label="@string/title_applications">
         <argument
             android:name="title"
@@ -124,7 +124,7 @@
 
     <fragment
         android:id="@+id/searchFiltersFragment"
-        android:name="com.example.mormeehing.PlaceholderFragment"
+        android:name="com.example.mormeehing.feature.common.PlaceholderFragment"
         android:label="@string/title_search_filters">
         <argument
             android:name="title"
