@@ -1,4 +1,6 @@
-package com.example.mormeehing;
+package com.example.mormeehing.feature.jobs;
+
+import com.example.mormeehing.R;
 
 import org.junit.Test;
 

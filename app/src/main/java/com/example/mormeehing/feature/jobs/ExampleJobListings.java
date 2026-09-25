@@ -1,5 +1,6 @@
-package com.example.mormeehing;
+package com.example.mormeehing.feature.jobs;
 
+import com.example.mormeehing.R;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

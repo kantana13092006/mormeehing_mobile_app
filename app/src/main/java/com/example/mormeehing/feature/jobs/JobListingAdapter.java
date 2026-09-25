@@ -1,4 +1,4 @@
-package com.example.mormeehing;
+package com.example.mormeehing.feature.jobs;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mormeehing.R;
 import java.util.List;
 
 public final class JobListingAdapter extends RecyclerView.Adapter<JobListingAdapter.JobListingViewHolder> {

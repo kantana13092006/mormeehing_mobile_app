@@ -1,4 +1,4 @@
-package com.example.mormeehing;
+package com.example.mormeehing.feature.jobs;
 
 import androidx.annotation.StringRes;
 
