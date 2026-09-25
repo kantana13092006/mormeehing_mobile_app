@@ -1,4 +1,4 @@
-package com.example.mormeehing;
+package com.example.mormeehing.core.navigation;
 
 import android.content.Context;
 

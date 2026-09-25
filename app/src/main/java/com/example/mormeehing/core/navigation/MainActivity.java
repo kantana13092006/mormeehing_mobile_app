@@ -1,4 +1,4 @@
-package com.example.mormeehing;
+package com.example.mormeehing.core.navigation;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -15,6 +15,7 @@ import androidx.navigation.NavDestination;
 import androidx.navigation.NavOptions;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.mormeehing.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;

@@ -1,10 +1,12 @@
-package com.example.mormeehing;
+package com.example.mormeehing.core.navigation;
 
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.espresso.NoActivityResumedException;
 import androidx.lifecycle.Lifecycle;
 import androidx.navigation.fragment.NavHostFragment;
+
+import com.example.mormeehing.R;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
