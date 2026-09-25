@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.mormeehing.SplashFragment"
+        android:name="com.example.mormeehing.feature.auth.SplashFragment"
         android:label="@string/title_splash">
         <argument
             android:name="title"
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.mormeehing.LoginFragment"
+        android:name="com.example.mormeehing.feature.auth.LoginFragment"
         android:label="@string/title_login">
         <argument
             android:name="title"

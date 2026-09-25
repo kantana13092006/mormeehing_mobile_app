@@ -1,4 +1,4 @@
-package com.example.mormeehing;
+package com.example.mormeehing.feature.auth;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.mormeehing.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
