@@ -30,7 +30,7 @@
     <string name="content_description_password_toggle">แสดงหรือซ่อนรหัสผ่าน</string>
     <string name="mock_user_email" translatable="false">student@example.com</string>
     <string name="mock_user_password" translatable="false">password</string>
-    <string name="search_result_summary">งานตัวอย่างที่เหมาะกับคุณ 3 งาน</string>
+    <string name="search_result_summary">งานตัวอย่างที่เหมาะกับคุณ %1$d งาน</string>
     <string name="job_status_open">เปิดรับสมัคร</string>
     <string name="job_cafe_title">พนักงานร้านกาแฟ</string>
     <string name="job_cafe_company">Cafe Amazon</string>
