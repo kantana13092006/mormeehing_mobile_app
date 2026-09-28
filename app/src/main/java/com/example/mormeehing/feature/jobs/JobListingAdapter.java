@@ -33,7 +33,7 @@ public final class JobListingAdapter extends RecyclerView.Adapter<JobListingAdap
         holder.title.setText(listing.getTitleResId());
         holder.company.setText(listing.getCompanyResId());
         holder.pay.setText(listing.getPayResId());
-        holder.distance.setText(listing.getDistanceResId());
+        holder.distance.setText(String.valueOf(listing.getDistance()));
         holder.schedule.setText(listing.getScheduleResId());
         holder.status.setText(listing.getStatusResId());
     }
