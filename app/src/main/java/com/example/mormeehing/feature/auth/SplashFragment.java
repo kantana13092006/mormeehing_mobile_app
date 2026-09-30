@@ -22,8 +22,7 @@ public class SplashFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_splash, container, false);
         View.OnClickListener openLogin = ignored ->
                 NavHostFragment.findNavController(this).navigate(R.id.action_splash_to_login);
-        view.findViewById(R.id.action_get_started).setOnClickListener(openLogin);
-        view.findViewById(R.id.action_login).setOnClickListener(openLogin);
+        view.findViewById(R.id.btnstart).setOnClickListener(openLogin);
         return view;
     }
 }
