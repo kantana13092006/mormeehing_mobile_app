@@ -4,7 +4,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashFragment"
     android:background="#E7E7E7">
 
 
@@ -21,7 +20,7 @@
         android:layout_height="60dp"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="100dp"
-        android:text="GET START"
+        android:text="GET START TEST"
         android:backgroundTint="#4285F4"/>
 
 </FrameLayout>
