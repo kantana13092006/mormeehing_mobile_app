@@ -30,6 +30,10 @@
             app:destination="@id/homeFragment"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/iogin_to_search"
+            app:destination="@id/searchFragment" />
+
     </fragment>
 
     <fragment
