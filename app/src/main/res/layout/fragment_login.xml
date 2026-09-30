@@ -18,7 +18,7 @@
             android:id="@+id/login_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/title_login"
+            android:text="เข้าสู่ระบบ"
             android:textAppearance="?attr/textAppearanceHeadlineMedium"
             android:textColor="@color/color_on_surface" />
 

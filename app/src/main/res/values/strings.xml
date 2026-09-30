@@ -47,4 +47,6 @@
     <string name="job_event_pay">120 บาท/ชม.</string>
     <string name="job_event_distance">3.1 กม. จากมหาวิทยาลัย</string>
     <string name="job_event_schedule">10:00 &#8211; 15:00 &#8226; เสาร์</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

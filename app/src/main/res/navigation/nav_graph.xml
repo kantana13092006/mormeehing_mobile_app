@@ -34,7 +34,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.mormeehing.feature.common.PlaceholderFragment"
+        android:name="com.example.mormeehing.HomeFragment"
         android:label="@string/title_home">
         <argument
             android:name="title"
@@ -64,7 +64,7 @@
 
     <fragment
         android:id="@+id/scheduleFragment"
-        android:name="com.example.mormeehing.feature.common.PlaceholderFragment"
+        android:name="com.example.mormeehing.JobFragment"
         android:label="@string/title_schedule">
         <argument
             android:name="title"
@@ -74,7 +74,7 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.mormeehing.feature.common.PlaceholderFragment"
+        android:name="com.example.mormeehing.ProfileFragment"
         android:label="@string/title_profile">
         <argument
             android:name="title"
