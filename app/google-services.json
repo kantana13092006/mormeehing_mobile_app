@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "267035572872",
+    "project_id": "finalproject-89c2d",
+    "storage_bucket": "finalproject-89c2d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267035572872:android:52208d41242ac0cf13fd3d",
+        "android_client_info": {
+          "package_name": "com.example.mormeehing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPtXX2J8ZgKYPuCvNDEhXVEMEgpMiRFRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267035572872:android:dc6fd696b7eeded513fd3d",
+        "android_client_info": {
+          "package_name": "com.example.mormeehing.feature.auth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPtXX2J8ZgKYPuCvNDEhXVEMEgpMiRFRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

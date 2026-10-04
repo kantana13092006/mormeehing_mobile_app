@@ -1,118 +1,178 @@
 package com.example.mormeehing.feature.auth;
 
+import android.Manifest;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
-
 import com.example.mormeehing.R;
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginFragment extends Fragment {
 
-    private TextInputLayout emailField;
-    private TextInputLayout passwordField;
-    private TextInputEditText emailInput;
-    private TextInputEditText passwordInput;
-    private TextView formError;
+    private EditText etEmail;
+    private  EditText etPassword;
+    private TextView btnLogin;
+    private TextView txtRegister;
+    private FirebaseAuth auth;
+
+    private  static final String CHANNEL_ID = "login_channel";
 
     @Nullable
     @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater,
-            @Nullable ViewGroup container,
-            @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_login, container, false);
-        emailField = view.findViewById(R.id.email_field);
-        passwordField = view.findViewById(R.id.password_field);
-        emailInput = view.findViewById(R.id.input_email);
-        passwordInput = view.findViewById(R.id.input_password);
-        formError = view.findViewById(R.id.form_error);
-        emailInput.setText(R.string.mock_user_email);
-        passwordInput.setText(R.string.mock_user_password);
+            ViewGroup container,
+            Bundle savedInstanceState 
+    ){
+        return  inflater.inflate(
+          R.layout.fragment_login,
+          container,
+          false      
+        );
+    }
 
-        TextWatcher clearEmailError = new SimpleTextWatcher() {
-            @Override
-            public void afterTextChanged(Editable editable) {
-                emailField.setError(null);
-                clearFormError();
+    @Override
+    public void onViewCreated(
+            @NonNull View view, 
+            @Nullable Bundle savedInstanceState
+    ) {
+        super.onViewCreated(view, savedInstanceState);
+
+        etEmail = view.findViewById(R.id.etEmail);
+        etPassword = view.findViewById(R.id.etPassword);
+        btnLogin = view.findViewById(R.id.btnLogin);
+        txtRegister = view.findViewById(R.id.txtRegister);
+
+        auth = FirebaseAuth.getInstance();
+        
+        createNotificationChannel();
+        requestNotificationPermission();
+
+        btnLogin.setOnClickListener(v -> login());
+
+        txtRegister.setOnClickListener(v -> {
+
+            NavHostFragment.findNavController(this)
+                    .navigate(
+                            R.id.regisFragment
+                    );
+                });
+    }
+
+    private void login() {
+        String email = etEmail.getText().toString().trim();
+        String password = etPassword.getText().toString().trim();
+
+        if(email.isEmpty() || password.isEmpty()) {
+
+            Toast.makeText(requireContext(),"กรุณากรอก Email และ Passwprd", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        auth.signInWithEmailAndPassword(email,password)
+                .addOnCompleteListener(task -> {
+                    if(task.isSuccessful()) {
+                        Toast.makeText(requireContext(),"Login Successful", Toast.LENGTH_SHORT).show();
+
+                        showNotification(email);
+
+                        NavHostFragment.findNavController(this)
+                                .navigate(
+                                        R.id.action_login_to_home
+                                );
+
+                    }else {
+
+                        Toast.makeText(requireContext(),"Login Failed",Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+    private void createNotificationChannel() {
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel =
+                    new NotificationChannel(
+                        CHANNEL_ID,
+                            "Login Notification",
+                            NotificationManager.IMPORTANCE_HIGH
+                    );
+            NotificationManager manager =
+                    (NotificationManager) requireContext()
+                            .getSystemService(
+                                    Context.NOTIFICATION_SERVICE
+                            );
+            if(manager != null) {
+                manager.createNotificationChannel(channel);
             }
-        };
-        TextWatcher clearPasswordError = new SimpleTextWatcher() {
-            @Override
-            public void afterTextChanged(Editable editable) {
-                passwordField.setError(null);
-                clearFormError();
+        }
+    }
+    private void requestNotificationPermission() {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+
+            if(ContextCompat.checkSelfPermission(
+                    requireContext(),
+                    Manifest.permission.POST_NOTIFICATIONS
+            ) != PackageManager.PERMISSION_GRANTED) {
+
+                requestPermissions(
+                        new String[]{
+                                Manifest.permission.POST_NOTIFICATIONS
+                        },
+                        100
+                );
             }
-        };
-        emailInput.addTextChangedListener(clearEmailError);
-        passwordInput.addTextChangedListener(clearPasswordError);
-
-        MaterialButton submit = view.findViewById(R.id.submit_login);
-        submit.setOnClickListener(ignored -> submitLogin());
-        return view;
-    }
-
-    private void submitLogin() {
-        clearFieldErrors();
-        clearFormError();
-
-        MockAuthValidator validator = new MockAuthValidator(
-                getString(R.string.mock_user_email),
-                getString(R.string.mock_user_password));
-        MockAuthValidator.ValidationError result = validator.validate(
-                textOf(emailInput),
-                textOf(passwordInput));
-
-        if (result == MockAuthValidator.ValidationError.EMAIL_REQUIRED) {
-            emailField.setError(getString(R.string.error_email_required));
-            return;
-        }
-        if (result == MockAuthValidator.ValidationError.PASSWORD_REQUIRED) {
-            passwordField.setError(getString(R.string.error_password_required));
-            return;
-        }
-        if (result == MockAuthValidator.ValidationError.INVALID_CREDENTIALS) {
-            formError.setText(getString(R.string.error_invalid_credentials));
-            formError.setVisibility(View.VISIBLE);
-            return;
-        }
-
-        NavHostFragment.findNavController(this).navigate(R.id.action_login_to_home);
-    }
-
-    private void clearFieldErrors() {
-        emailField.setError(null);
-        passwordField.setError(null);
-    }
-
-    private void clearFormError() {
-        formError.setText(null);
-        formError.setVisibility(View.GONE);
-    }
-
-    private String textOf(TextInputEditText input) {
-        Editable value = input.getText();
-        return value == null ? "" : value.toString();
-    }
-
-    private abstract static class SimpleTextWatcher implements TextWatcher {
-        @Override
-        public void beforeTextChanged(CharSequence sequence, int start, int count, int after) {
-        }
-
-        @Override
-        public void onTextChanged(CharSequence sequence, int start, int before, int count) {
         }
     }
-}
+    private void showNotification(String email) {
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+
+            if(ContextCompat.checkSelfPermission(
+             requireContext(),
+             Manifest.permission.POST_NOTIFICATIONS
+            ) != PackageManager.PERMISSION_GRANTED) {
+                return;
+            }
+        }
+        NotificationCompat.Builder notification =
+                new NotificationCompat.Builder(
+                        requireContext(),
+                        CHANNEL_ID
+                )
+                        .setSmallIcon(android.R.drawable.ic_dialog_info)
+                        .setContentTitle("เข้าสู่ระบบสำเร็จ")
+                        .setContentText("ยินดีต้อนรับ " + email)
+                        .setPriority(NotificationCompat.PRIORITY_HIGH)
+                        .setAutoCancel(true);
+
+        NotificationManagerCompat
+                .from(requireContext())
+                .notify(1,notification.build()
+                );
+        }
+    }
+
+
+
+
+
+
+

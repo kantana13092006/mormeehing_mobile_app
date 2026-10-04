@@ -42,7 +42,7 @@
             app:cardElevation="1dp">
 
             <EditText
-                android:id="@+id/etregisofEmail"
+                android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
@@ -67,7 +67,7 @@
             app:cardElevation="1dp">
 
             <EditText
-                android:id="@+id/etregisofPassword"
+                android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
@@ -90,7 +90,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/btnregisofcreate"
+                android:id="@+id/btncreate"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -105,7 +105,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/btnregisofLogin"
+                android:id="@+id/btnBack"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
