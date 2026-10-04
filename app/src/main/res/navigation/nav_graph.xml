@@ -135,4 +135,14 @@
             android:defaultValue="@null"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/regisFragment"
+        android:name="com.example.mormeehing.RegisFragment"
+        android:label="สมัครสมาชิก">
+        <argument
+            android:name="title"
+            android:defaultValue="@null"
+            app:argType="string" />
+    </fragment>
+
 </navigation>
