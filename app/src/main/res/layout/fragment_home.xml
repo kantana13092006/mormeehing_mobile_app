@@ -5,10 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5FBFF">
-
-
-    <!-- ================= HEADER ================= -->
+    android:orientation="vertical"
+    android:background="@drawable/bg_login">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
@@ -21,9 +19,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
-        <!-- Logo -->
-
         <ImageView
             android:id="@+id/imgLogo"
             android:layout_width="56dp"
@@ -34,9 +29,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-
-        <!-- App Name -->
 
         <TextView
             android:id="@+id/tvAppName"
@@ -50,9 +42,6 @@
             app:layout_constraintStart_toEndOf="@id/imgLogo"
             app:layout_constraintTop_toTopOf="@id/imgLogo" />
 
-
-        <!-- Subtitle -->
-
         <TextView
             android:id="@+id/tvAppSubtitle"
             android:layout_width="wrap_content"
@@ -65,9 +54,6 @@
             app:layout_constraintTop_toBottomOf="@id/tvAppName" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <!-- ================= GREETING ================= -->
 
     <TextView
         android:id="@+id/tvGreeting"
@@ -97,8 +83,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvGreeting" />
-
-
 
     <ImageView
         android:id="@+id/imgBanner"

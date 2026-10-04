@@ -1,14 +1,315 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JobFragment">
+    android:background="@drawable/bg_login">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</FrameLayout>
+        <!-- ===== แถบหัวข้อ ===== -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|start"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:text="‹"
+                    android:textColor="#1F6FEB"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="เพิ่มงาน"
+                android:textColor="#1B3A8A"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <!-- ===== การ์ดฟอร์ม ===== -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- ชื่องาน -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ชื่องาน"
+                    android:textColor="#1B2430"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="14dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#DCE6F5"
+                    app:strokeWidth="1dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@null"
+                        android:hint="กรอกชื่องาน"
+                        android:inputType="text"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:textColor="#1B2430"
+                        android:textColorHint="#9AA3AF"
+                        android:textSize="14sp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- รายละเอียดงาน -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="รายละเอียดงาน"
+                    android:textColor="#1B2430"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="14dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#DCE6F5"
+                    app:strokeWidth="1dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="96dp"
+                        android:background="@null"
+                        android:gravity="top|start"
+                        android:hint="กรอกรายละเอียดงาน"
+                        android:inputType="textMultiLine"
+                        android:padding="14dp"
+                        android:textColor="#1B2430"
+                        android:textColorHint="#9AA3AF"
+                        android:textSize="14sp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- ประเภทงาน -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ประเภทงาน"
+                    android:textColor="#1B2430"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="14dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#DCE6F5"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="งานพิเศษ"
+                            android:textColor="#1B2430"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⌄"
+                            android:textColor="#5B6675"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- จำนวนคนที่ต้องการ -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="จำนวนคนที่ต้องการ"
+                    android:textColor="#1B2430"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="14dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#DCE6F5"
+                    app:strokeWidth="1dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@null"
+                        android:hint="ระบุจำนวนคน"
+                        android:inputType="number"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:textColor="#1B2430"
+                        android:textColorHint="#9AA3AF"
+                        android:textSize="14sp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- ค่าตอบแทน -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ค่าตอบแทน"
+                    android:textColor="#1B2430"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="14dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#DCE6F5"
+                    app:strokeWidth="1dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@null"
+                        android:hint="ระบุค่าตอบแทน (ถ้ามี)"
+                        android:inputType="text"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:textColor="#1B2430"
+                        android:textColorHint="#9AA3AF"
+                        android:textSize="14sp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- วันหมดเขตรับสมัคร -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="วันหมดเขตรับสมัคร"
+                    android:textColor="#1B2430"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#DCE6F5"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_menu_my_calendar"
+                            app:tint="#5B6675" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="เลือกวันที่"
+                            android:textColor="#9AA3AF"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_menu_my_calendar"
+                            app:tint="#5B6675" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- ปุ่มประกาศงาน -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="26dp"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:text="ประกาศงาน"
+                        android:background="@drawable/bg_button_gradient"
+                        android:clickable="true"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
