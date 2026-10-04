@@ -26,8 +26,6 @@ public class SearchFragment extends Fragment {
             @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_search, container, false);
         List<JobListing> listings = ExampleJobListings.create();
-        TextView summary = view.findViewById(R.id.search_result_summary);
-        summary.setText(getString(R.string.search_result_summary, listings.size()));
 
         RecyclerView jobList = view.findViewById(R.id.job_list);
         jobList.setLayoutManager(new LinearLayoutManager(requireContext()));
