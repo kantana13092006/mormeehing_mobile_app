@@ -30,6 +30,10 @@
             app:destination="@id/homeFragment"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/iogin_to_search"
+            app:destination="@id/searchFragment" />
+
     </fragment>
 
     <fragment
@@ -131,4 +135,14 @@
             android:defaultValue="@null"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/regisFragment"
+        android:name="com.example.mormeehing.RegisFragment"
+        android:label="สมัครสมาชิก">
+        <argument
+            android:name="title"
+            android:defaultValue="@null"
+            app:argType="string" />
+    </fragment>
+
 </navigation>
