@@ -7,98 +7,60 @@
     android:layout_height="match_parent"
     android:background="#F5FBFF">
 
-    <!-- ========================= -->
-    <!-- Header -->
-    <!-- ========================= -->
-
-    <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
-        android:contentDescription="Logo"
-        android:src="@drawable/logo_icon"
-        android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- ชื่อแอป -->
-    <TextView
-        android:id="@+id/tvAppName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="MorMeeNgan"
-        android:textColor="#1769E0"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/imgLogo"
-        app:layout_constraintTop_toTopOf="@id/imgLogo" />
-
-    <!-- ข้อความใต้ชื่อ -->
-    <TextView
-        android:id="@+id/tvAppSubtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:text="หางานในมอ  •  งานเล็กๆ ที่มีค่า"
-        android:textColor="#5F7193"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@id/tvAppName"
-        app:layout_constraintTop_toBottomOf="@id/tvAppName" />
 
 
+    <!-- ================= HEADER ================= -->
 
-
-
-    <TextView
-        android:id="@+id/tvGreeting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="34dp"
-        android:text="สวัสดี ตอนเช้า ☀️"
-        android:textColor="#122B5F"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgLogo" />
-
-
-    <TextView
-        android:id="@+id/tvGreetingSubtitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="6dp"
-        android:text="วันนี้มีโอกาสดี ๆ รอคุณอยู่ เริ่มต้นวันด้วยสิ่งดี ๆ กันเลย!"
-        android:textColor="#60769D"
-        android:textSize="16sp"
-        android:lineSpacingExtra="2dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="@drawable/bg_header"
+        android:paddingStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvGreeting" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <!-- ========================= -->
-    <!-- Banner เพียง 1 รูป -->
-    <!-- ========================= -->
 
-    <ImageView
-        android:id="@+id/imgBanner"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="22dp"
-        android:contentDescription="Banner งานพาร์ทไทม์ในมหาวิทยาลัย"
-        android:src="@drawable/home_banner"
-        android:scaleType="centerCrop"
-        android:background="@drawable/home_banner"
-        android:clipToOutline="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvGreetingSubtitle" />
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:contentDescription="Logo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- App Name -->
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:text="MorMeeNgan"
+            android:textColor="#1769E0"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/imgLogo"
+            app:layout_constraintTop_toTopOf="@id/imgLogo" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvAppSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="หางานในมอ  •  งานเล็กๆ ที่มีค่า"
+            android:textColor="#7184A5"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tvAppName"
+            app:layout_constraintTop_toBottomOf="@id/tvAppName" />
+
+       />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
