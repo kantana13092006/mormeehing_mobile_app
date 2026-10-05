@@ -78,31 +78,31 @@ public class LoginFragment extends Fragment {
     }
 
     private void login() {
-        String email = etEmail.getText().toString().trim();
-        String password = etPassword.getText().toString().trim();
-
-        if(email.isEmpty() || password.isEmpty()) {
-
-            Toast.makeText(requireContext(),"กรุณากรอก Email และ Passwprd", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        auth.signInWithEmailAndPassword(email,password)
-                .addOnCompleteListener(task -> {
-                    if(task.isSuccessful()) {
-                        Toast.makeText(requireContext(),"Login Successful", Toast.LENGTH_SHORT).show();
-
-                        showNotification(email);
-
+//        String email = etEmail.getText().toString().trim();
+//        String password = etPassword.getText().toString().trim();
+//
+//        if(email.isEmpty() || password.isEmpty()) {
+//
+//            Toast.makeText(requireContext(),"กรุณากรอก Email และ Passwprd", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//        auth.signInWithEmailAndPassword(email,password)
+//                .addOnCompleteListener(task -> {
+//                    if(task.isSuccessful()) {
+//                        Toast.makeText(requireContext(),"Login Successful", Toast.LENGTH_SHORT).show();
+//
+//                        showNotification(email);
+//
                         NavHostFragment.findNavController(this)
                                 .navigate(
                                         R.id.action_login_to_home
                                 );
-
-                    }else {
-
-                        Toast.makeText(requireContext(),"Login Failed",Toast.LENGTH_SHORT).show();
-                    }
-                });
+//
+//                    }else {
+//
+//                        Toast.makeText(requireContext(),"Login Failed",Toast.LENGTH_SHORT).show();
+//                    }
+//                });
     }
 
     private void createNotificationChannel() {

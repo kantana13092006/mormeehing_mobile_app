@@ -58,7 +58,7 @@
 
     <fragment
         android:id="@+id/createJobFragment"
-        android:name="com.example.mormeehing.feature.common.PlaceholderFragment"
+        android:name="com.example.mormeehing.JobFragment"
         android:label="@string/title_create_job">
         <argument
             android:name="title"
@@ -68,7 +68,7 @@
 
     <fragment
         android:id="@+id/scheduleFragment"
-        android:name="com.example.mormeehing.JobFragment"
+        android:name="com.example.mormeehing.TableFragment"
         android:label="@string/title_schedule">
         <argument
             android:name="title"
