@@ -20,6 +20,15 @@
     <string name="title_income">รายได้</string>
     <string name="title_applications">การสมัครงาน</string>
     <string name="title_search_filters">ตัวกรองการค้นหา</string>
+    <string name="search_filter_category_label">ประเภทงาน</string>
+    <string name="search_filter_criteria_label">เงื่อนไขงาน</string>
+    <string name="search_filter_all">ทั้งหมด</string>
+    <string name="search_filter_food">ร้านอาหาร/เครื่องดื่ม</string>
+    <string name="search_filter_retail">ค้าปลีก</string>
+    <string name="search_filter_distance">ระยะทาง ≤ 5 กม.</string>
+    <string name="search_filter_pay">ค่าจ้าง ≥ 120 บาท/ชม.</string>
+    <string name="search_filter_hours">ชั่วโมงงาน ≤ 5 ชม.</string>
+    <string name="search_filter_days">จันทร์–ศุกร์</string>
     <string name="menu_home">หน้าหลัก</string>
     <string name="menu_search">ค้นหางาน</string>
     <string name="menu_schedule">ตารางงาน</string>

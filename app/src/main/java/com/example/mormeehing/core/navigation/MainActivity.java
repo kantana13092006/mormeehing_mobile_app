@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     private NavController navController;
     private BottomNavigationView bottomAppBar;
     private FloatingActionButton createJobFab;
+    private View navHostView;
+    private int bottomSystemInset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         bottomAppBar = findViewById(R.id.bottom_app_bar);
         createJobFab = findViewById(R.id.create_job_fab);
+        navHostView = findViewById(R.id.nav_host);
         ViewCompat.setOnApplyWindowInsetsListener(bottomAppBar, (view, insets) -> {
             view.setPadding(0, 0, 0, 0);
             return insets;
@@ -55,11 +58,13 @@ public class MainActivity extends AppCompatActivity {
             Insets navigationBars = insets.getInsetsIgnoringVisibility(
                     WindowInsetsCompat.Type.navigationBars());
             int bottomInset = Math.max(systemBars.bottom, navigationBars.bottom);
+            bottomSystemInset = bottomInset;
             view.setPadding(systemBars.left, systemBars.top, systemBars.right, 0);
             CoordinatorLayout.LayoutParams bottomBarParams =
                     (CoordinatorLayout.LayoutParams) bottomAppBar.getLayoutParams();
             bottomBarParams.bottomMargin = bottomInset;
             bottomAppBar.setLayoutParams(bottomBarParams);
+            updateNavHostBottomMargin();
             return insets;
         });
     }
@@ -99,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
         bottomAppBar.setVisibility(showBottomMenu ? View.VISIBLE : View.GONE);
         createJobFab.setVisibility(showBottomMenu ? View.VISIBLE : View.GONE);
+        updateNavHostBottomMargin();
 
         int selectedMenuId = menuItemForDestination(destination.getId());
         if (selectedMenuId != 0) {
@@ -106,6 +112,28 @@ public class MainActivity extends AppCompatActivity {
             if (selectedItem != null) {
                 selectedItem.setChecked(true);
             }
+        }
+    }
+
+    private void updateNavHostBottomMargin() {
+        if (navHostView == null || bottomAppBar == null) {
+            return;
+        }
+
+        CoordinatorLayout.LayoutParams navHostParams =
+                (CoordinatorLayout.LayoutParams) navHostView.getLayoutParams();
+        int bottomBarHeight = bottomAppBar.getHeight();
+        if (bottomBarHeight == 0) {
+            bottomBarHeight = bottomAppBar.getLayoutParams().height;
+        }
+
+        int bottomBarOffset = bottomAppBar.getVisibility() == View.VISIBLE
+                ? bottomBarHeight
+                : 0;
+        int requiredBottomMargin = bottomSystemInset + bottomBarOffset;
+        if (navHostParams.bottomMargin != requiredBottomMargin) {
+            navHostParams.bottomMargin = requiredBottomMargin;
+            navHostView.setLayoutParams(navHostParams);
         }
     }
 

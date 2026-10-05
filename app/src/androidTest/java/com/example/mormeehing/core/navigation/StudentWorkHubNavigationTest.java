@@ -1,5 +1,7 @@
 package com.example.mormeehing.core.navigation;
 
+import android.view.View;
+
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.espresso.NoActivityResumedException;
@@ -18,12 +20,15 @@ import static androidx.test.espresso.action.ViewActions.replaceText;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.isChecked;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibility;
 import static androidx.test.espresso.matcher.ViewMatchers.Visibility.GONE;
 import static androidx.test.espresso.matcher.ViewMatchers.Visibility.VISIBLE;
+import static org.hamcrest.Matchers.not;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(AndroidJUnit4.class)
 public class StudentWorkHubNavigationTest {
@@ -126,6 +131,52 @@ public class StudentWorkHubNavigationTest {
             onView(withText(R.string.job_cafe_pay)).check(matches(isDisplayed()));
             onView(withText(R.string.job_store_title)).check(matches(isDisplayed()));
             onView(withText(R.string.job_event_title)).check(matches(isDisplayed()));
+        }
+    }
+
+    @Test
+    public void mainContentStopsAboveBottomNavigation() {
+        try (ActivityScenario<MainActivity> scenario = ActivityScenario.launch(MainActivity.class)) {
+            loginWithMockCredentials();
+            onView(withId(R.id.nav_search)).perform(click());
+
+            scenario.onActivity(activity -> {
+                View navHost = activity.findViewById(R.id.nav_host);
+                View bottomAppBar = activity.findViewById(R.id.bottom_app_bar);
+
+                assertTrue(
+                        "Navigation host must end above the bottom navigation bar",
+                        navHost.getBottom() <= bottomAppBar.getTop());
+            });
+        }
+    }
+
+    @Test
+    public void searchPageShowsFilterControls() {
+        try (ActivityScenario<MainActivity> scenario = ActivityScenario.launch(MainActivity.class)) {
+            loginWithMockCredentials();
+            onView(withId(R.id.nav_search)).perform(click());
+
+            onView(withId(R.id.filter_all))
+                    .check(matches(isChecked()));
+            onView(withId(R.id.filter_food))
+                    .check(matches(isDisplayed()));
+            onView(withText("ทั้งหมด"))
+                    .check(matches(isDisplayed()));
+            onView(withText("ร้านอาหาร/เครื่องดื่ม"))
+                    .check(matches(isDisplayed()));
+
+            onView(withId(R.id.filter_food)).perform(click());
+            onView(withId(R.id.filter_food)).check(matches(isChecked()));
+            onView(withId(R.id.filter_all)).check(matches(not(isChecked())));
+
+            onView(withId(R.id.filter_distance)).perform(click());
+            onView(withId(R.id.filter_food)).check(matches(isChecked()));
+            onView(withId(R.id.filter_distance)).check(matches(isChecked()));
+
+            onView(withId(R.id.filter_all)).perform(click());
+            onView(withId(R.id.filter_all)).check(matches(isChecked()));
+            onView(withId(R.id.filter_distance)).check(matches(not(isChecked())));
         }
     }
 

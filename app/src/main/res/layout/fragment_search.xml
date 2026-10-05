@@ -18,7 +18,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Logo -->
         <ImageView
             android:id="@+id/imgLogo"
             android:layout_width="56dp"
@@ -30,7 +29,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />
 
-        <!-- App Name -->
         <TextView
             android:id="@+id/tvAppName"
             android:layout_width="wrap_content"
@@ -43,7 +41,6 @@
             app:layout_constraintStart_toEndOf="@id/imgLogo"
             app:layout_constraintTop_toTopOf="@id/imgLogo" />
 
-        <!-- Subtitle -->
         <TextView
             android:id="@+id/tvAppSubtitle"
             android:layout_width="wrap_content"
@@ -54,25 +51,186 @@
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@id/tvAppName"
             app:layout_constraintTop_toBottomOf="@id/tvAppName" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <LinearLayout
+        android:id="@+id/search_controls"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_gutter"
+        android:layout_marginTop="@dimen/space_sm"
+        android:layout_marginEnd="@dimen/screen_gutter"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_xs"
+            android:text="@string/search_filter_category_label"
+            android:textColor="@color/color_on_surface_variant"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:fadeScrollbars="false"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/filter_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/control_min_height"
+                    android:text="@string/search_filter_all"
+                    android:textColor="@color/search_chip_text"
+                    android:textSize="12sp"
+                    app:chipBackgroundColor="@color/search_chip_background"
+                    app:chipCornerRadius="@dimen/search_control_corner_radius"
+                    app:chipStrokeColor="@color/search_chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:closeIconVisible="false"
+                    app:checkedIconVisible="false" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/filter_food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/control_min_height"
+                    android:layout_marginStart="@dimen/space_sm"
+                    android:text="@string/search_filter_food"
+                    android:textColor="@color/search_chip_text"
+                    android:textSize="12sp"
+                    app:chipBackgroundColor="@color/search_chip_background"
+                    app:chipCornerRadius="@dimen/search_control_corner_radius"
+                    app:chipStrokeColor="@color/search_chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:closeIconVisible="false"
+                    app:checkedIconVisible="false" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/filter_retail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/control_min_height"
+                    android:layout_marginStart="@dimen/space_sm"
+                    android:text="@string/search_filter_retail"
+                    android:textColor="@color/search_chip_text"
+                    android:textSize="12sp"
+                    app:chipBackgroundColor="@color/search_chip_background"
+                    app:chipCornerRadius="@dimen/search_control_corner_radius"
+                    app:chipStrokeColor="@color/search_chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:closeIconVisible="false"
+                    app:checkedIconVisible="false" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:layout_marginBottom="@dimen/space_xs"
+            android:text="@string/search_filter_criteria_label"
+            android:textColor="@color/color_on_surface_variant"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:clipToPadding="false"
+            android:fadeScrollbars="false"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/filter_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/control_min_height"
+                    android:text="@string/search_filter_distance"
+                    android:textColor="@color/search_chip_text"
+                    android:textSize="12sp"
+                    app:chipBackgroundColor="@color/search_chip_background"
+                    app:chipCornerRadius="@dimen/search_control_corner_radius"
+                    app:chipStrokeColor="@color/search_chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:closeIconVisible="false"
+                    app:checkedIconVisible="false" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/filter_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/control_min_height"
+                    android:layout_marginStart="@dimen/space_sm"
+                    android:text="@string/search_filter_pay"
+                    android:textColor="@color/search_chip_text"
+                    android:textSize="12sp"
+                    app:chipBackgroundColor="@color/search_chip_background"
+                    app:chipCornerRadius="@dimen/search_control_corner_radius"
+                    app:chipStrokeColor="@color/search_chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:closeIconVisible="false"
+                    app:checkedIconVisible="false" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/filter_hours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/control_min_height"
+                    android:layout_marginStart="@dimen/space_sm"
+                    android:text="@string/search_filter_hours"
+                    android:textColor="@color/search_chip_text"
+                    android:textSize="12sp"
+                    app:chipBackgroundColor="@color/search_chip_background"
+                    app:chipCornerRadius="@dimen/search_control_corner_radius"
+                    app:chipStrokeColor="@color/search_chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:closeIconVisible="false"
+                    app:checkedIconVisible="false" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/filter_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/control_min_height"
+                    android:layout_marginStart="@dimen/space_sm"
+                    android:text="@string/search_filter_days"
+                    android:textColor="@color/search_chip_text"
+                    android:textSize="12sp"
+                    app:chipBackgroundColor="@color/search_chip_background"
+                    app:chipCornerRadius="@dimen/search_control_corner_radius"
+                    app:chipStrokeColor="@color/search_chip_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:closeIconVisible="false"
+                    app:checkedIconVisible="false" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
 
     <!-- Job List -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/job_list"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="@dimen/screen_gutter"
+        android:layout_marginTop="@dimen/space_sm"
         android:layout_marginEnd="@dimen/screen_gutter"
         android:clipToPadding="false"
         android:paddingBottom="@dimen/space_lg"
         tools:itemCount="3"
         tools:listitem="@layout/item_job_listing"
-        app:layout_constraintTop_toBottomOf="@id/header"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_controls" />
 </androidx.constraintlayout.widget.ConstraintLayout>
